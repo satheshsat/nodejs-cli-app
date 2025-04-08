@@ -9,8 +9,15 @@ import { runInquirerConfirmExample } from "../src/commands/inquirer-confirm-exam
 import { runInquirerListExample } from "../src/commands/inquirer-list-example.js";
 import { runOraExample } from "../src/commands/ora-example.js";
 import { ageCalc } from "../src/commands/age-calculation.js";
+import open, { openApp, apps } from "open";
 
 const examples = {
+  "Open Google": () => {
+    open("https://www.google.com");
+  },
+  'open chrome incognito': async () => {
+    await openApp(apps.chrome, {arguments: ['--incognito']});
+  },
   "Time Now": () => {
     const date = new Date();
     console.log(`Current time: ${date.toISOString()}`);
