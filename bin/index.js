@@ -17,15 +17,22 @@ let db = new sqlite3.Database('test.sqlite'); // Or provide a file path for pers
 const examples = {
   "sqlite": () => {
     db.serialize(function() {
-      db.run("CREATE TABLE user (name TEXT)");
+      // db.run("CREATE TABLE user (name TEXT)");
     
-      const stmt = db.prepare("INSERT INTO user VALUES (?)");
-      stmt.run("ChatGPT");
-      stmt.finalize();
+      // const stmt = db.prepare("INSERT INTO user VALUES (?)");
+      // stmt.run("ChatGPT");
+      // stmt.finalize();
     
       db.each("SELECT rowid AS id, name FROM user", function(err, row) {
         console.log(row.id + ": " + row.name);
       });
+      // db.run('DELETE FROM user WHERE rowid = ?', [3], function(err) {
+      //   if (err) {
+      //     console.error("Error deleting record: ", err);
+      //   } else {
+      //     console.log(`Row(s) deleted: ${this.changes}`);
+      //   }
+      // });
     });
     
     db.close();
