@@ -25,5 +25,8 @@
     "open": "^10.1.0",
     "ora": "^8.2.0",
     "sqlite3": "^5.1.7"
-  }
+  },
+  "publishConfig": {
+        "access": "public"
+    }
 }
