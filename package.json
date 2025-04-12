@@ -4,10 +4,12 @@
     "nodejs-cli-app": "./bin/index.js"
   },
   "type": "module",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Sample Node.js CLI application",
    "repository": "satheshsat/nodejs-cli-app",
   "keywords": [
+    "example",
+    "sample",
     "cli",
     "nodejs",
     "application"
