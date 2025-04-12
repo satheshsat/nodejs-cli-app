@@ -6,6 +6,7 @@
   "type": "module",
   "version": "0.0.1",
   "description": "Sample Node.js CLI application",
+   "repository": "satheshsat/nodejs-cli-app",
   "keywords": [
     "cli",
     "nodejs",
